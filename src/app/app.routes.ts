@@ -11,5 +11,11 @@ export const routes: Routes = [
     loadChildren: () =>
       import('./pages/user/user.module').then((m) => m.UserModule),
   },
-  //{ path: '', redirectTo: '/auth', pathMatch: 'full' },
+  {
+    path: 'error',
+    loadChildren: () =>
+      import('./pages/error/error.module').then((m) => m.ErrorModule),
+  },
+  { path: '', redirectTo: '/auth/signin', pathMatch: 'full' },
+  { path: '**', redirectTo: 'error/not-found' },
 ];
