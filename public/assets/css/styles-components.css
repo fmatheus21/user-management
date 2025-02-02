@@ -5,7 +5,8 @@
   --button-info-hover-background: #075985;
   --button-info-hover-border-color: #075985;
   --button-info-hover-color: #ffffff;
-  --inputtext-background: #ffffff;
+  --inputtext-background: #fdfdfd;
+  --inputtext-background-focus: #f1f1f4;
   --inputtext-color: #4b5675;
   --inputtext-border-color: #dbdfe9;
   --inputtext-padding-y: 1rem;
@@ -54,6 +55,7 @@
 .p-inputtext:enabled:hover {
   border-color: var(--inputtext-focus-border-color) !important;
   box-shadow: var(--inputtext-focus-ring-shadow) !important;
+  background: var(--inputtext-background-focus) !important;
 }
 
 .p-floatlabel:has(input:focus) label,
