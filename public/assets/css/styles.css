@@ -1,0 +1,57 @@
+@font-face {
+  font-family: Poppins-Regular;
+  src: url('../fonts/poppins/Poppins-Regular.ttf');
+}
+
+@font-face {
+  font-family: Poppins-Bold;
+  src: url('../fonts/poppins/Poppins-Bold.ttf');
+}
+
+@font-face {
+  font-family: Poppins-SemiBold;
+  src: url('../fonts/poppins/Poppins-SemiBold.ttf');
+}
+
+body,
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: Poppins-Regular !important;
+}
+
+.fw-semibold {
+  font-family: Poppins-SemiBold;
+}
+
+.btn,
+.fw-bolder {
+  font-family: Poppins-Bold;
+}
+
+app-root {
+  display: grid;
+}
+
+app-root,
+app-notfound,
+app-notfound #not-found,
+app-signin,
+app-signin #signin {
+  height: 100%;
+}
+
+app-notfound {
+  background-image: url('../media/image/bg/bg1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+app-signin {
+  background-image: url('../media/image/bg/bg10.jpg');
+  background-size: cover;
+  background-position: center;
+}

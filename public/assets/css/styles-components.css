@@ -1,0 +1,30 @@
+:root {
+  --button-info-background: #0284c7;
+  --button-info-border-color: #0284c7;
+  --button-info-color: #ffffff;
+  --button-info-hover-background: #075985;
+  --button-info-hover-border-color: #075985;
+  --button-info-hover-color: #ffffff;
+}
+
+.p-button {
+  padding: calc(0.775rem + 1px) calc(1.5rem + 1px) !important;
+}
+.p-button-label {
+  font-weight: bold !important;
+}
+.p-button-info {
+  background: var(--button-info-background) !important;
+  border: 1px solid var(--button-info-border-color) !important;
+  color: var(--button-info-color) !important;
+}
+
+.p-button-info:not(:disabled):hover {
+  background: var(--button-info-hover-background) !important;
+  border: 1px solid var(--button-info-hover-border-color) !important;
+  color: var(--button-info-hover-color) !important;
+}
+
+#button_signin button {
+  width: 100% !important;
+}
