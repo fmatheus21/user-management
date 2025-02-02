@@ -31,44 +31,27 @@
               <div class="text-gray-500 fw-semibold fs-6">Informe suas credenciais</div>
             </div>
 
-            <!--begin::Input group--->
             <div class="fv-row mb-8">
-              <!--begin::Email-->
-              <input
-                type="text"
-                placeholder="Email"
-                name="email"
-                autocomplete="off"
-                class="form-control bg-transparent" />
-              <!--end::Email-->
+              <p-floatlabel variant="in">
+                <p-inputmask id="username" mask="999.999.999-99" autocomplete="off" />
+                <label for="username">CPF</label>
+              </p-floatlabel>
             </div>
 
-            <!--end::Input group--->
             <div class="fv-row mb-3">
-              <!--begin::Password-->
-              <input
-                type="password"
-                placeholder="Password"
-                name="password"
-                autocomplete="off"
-                class="form-control bg-transparent" />
-              <!--end::Password-->
+              <p-floatlabel variant="in">
+                <p-password id="password" [toggleMask]="true" [feedback]="false" />
+                <label for="password">Senha</label>
+              </p-floatlabel>
             </div>
-            <!--end::Input group--->
 
-            <!--begin::Wrapper-->
             <div class="d-flex flex-stack flex-wrap gap-3 fs-base fw-semibold mb-8">
               <div></div>
 
-              <!--begin::Link-->
               <a [routerLink]="['/auth/recover']" class="link-primary"> Esqueceu a senha? </a>
-              <!--end::Link-->
             </div>
 
             <div class="d-grid mb-10">
-              <!--<button type="submit" id="kt_sign_in_submit" class="btn btn-primary">
-                <span class="indicator-label"> Sign In</span>
-              </button>-->
               <p-button id="button_signin" severity="info" label="Entrar" icon="pi pi-sign-in" />
             </div>
           </form>

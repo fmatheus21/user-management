@@ -5,6 +5,17 @@
   --button-info-hover-background: #075985;
   --button-info-hover-border-color: #075985;
   --button-info-hover-color: #ffffff;
+  --inputtext-background: #ffffff;
+  --inputtext-color: #4b5675;
+  --inputtext-border-color: #dbdfe9;
+  --inputtext-padding-y: 1rem;
+  --inputtext-focus-border-color: #0284c7;
+  --floatlabel-over-active-top: 0.3rem;
+  --floatlabel-active-font-size: 1rem;
+  --floatlabel-focus-color: #4b5675;
+  --floatlabel-label-active-font-weight: bold;
+  --floatlabel-label-active-color: #0284c7;
+  --inputtext-focus-ring-shadow: 0 0 0 0.2rem color-mix(in srgb, #0284c7, transparent 80%);
 }
 
 .p-button {
@@ -25,6 +36,47 @@
   color: var(--button-info-hover-color) !important;
 }
 
-#button_signin button {
+#button_signin button,
+.p-inputtext,
+.p-password {
   width: 100% !important;
+}
+
+.p-inputtext {
+  color: var(--inputtext-color) !important;
+  background: var(--inputtext-background) !important;
+  border: 1px solid var(--inputtext-border-color) !important;
+  font-size: 1.2rem !important;
+  padding-block: var(--inputtext-padding-y) !important;
+}
+
+.p-inputtext:enabled:focus,
+.p-inputtext:enabled:hover {
+  border-color: var(--inputtext-focus-border-color) !important;
+  box-shadow: var(--inputtext-focus-ring-shadow) !important;
+}
+
+.p-floatlabel:has(input:focus) label,
+.p-floatlabel:has(input.p-filled) label,
+.p-floatlabel:has(input:autofill) label,
+.p-floatlabel:has(textarea:focus) label,
+.p-floatlabel:has(textarea.p-filled) label,
+.p-floatlabel:has(.p-inputwrapper-focus) label,
+.p-floatlabel:has(.p-inputwrapper-filled) label {
+  font-size: var(--floatlabel-active-font-size) !important;
+  top: var(--floatlabel-over-active-top) !important;
+  font-weight: var(--floatlabel-label-active-font-weight) !important;
+}
+
+.p-floatlabel-in:has(input:focus) label,
+.p-floatlabel-in:has(textarea:focus) label,
+.p-floatlabel-in:has(.p-inputwrapper-focus) label {
+  color: var(--inputtext-color) !important;
+}
+
+.p-floatlabel-in:has(input.p-filled) label,
+.p-floatlabel-in:has(input:autofill) label,
+.p-floatlabel-in:has(textarea.p-filled) label,
+.p-floatlabel-in:has(.p-inputwrapper-filled) label {
+  color: var(--floatlabel-label-active-color) !important;
 }

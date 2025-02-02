@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SigninComponent } from './signin/signin.component';
-import { ButtonModule } from 'primeng/button';
 
 const routes: Routes = [
   {
