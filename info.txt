@@ -1,0 +1,3 @@
+npm install eslint prettier --save-dev
+ng add @angular-eslint/schematics
+npm install @typescript-eslint/parser @typescript-eslint/eslint-plugin --save-dev
