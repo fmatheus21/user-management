@@ -14,7 +14,5 @@ export class InputmaskComponent implements OnInit {
   @Input({ required: true }) autocomplete!: string;
   @Input({ required: true }) label!: string;
 
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
+  ngOnInit(): void {}
 }

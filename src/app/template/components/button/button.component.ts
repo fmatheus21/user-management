@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 type SeverityType =
   | 'success'
@@ -25,15 +25,11 @@ export class ButtonComponent implements OnInit {
   @Input({ required: true }) isReadOnly!: boolean;
   @Input({ required: true }) severity!: SeverityType;
   @Input({ required: true }) icon!: string;
+  @Output() onClick = new EventEmitter<void>();
 
-  ngOnInit(): void {
-    /*if (this.type === 'submit') {
-      this.icon = 'pi pi-check-circle';
-      this.styleClass = 'p-button-info';
-    } else if (this.type === 'cancel') {
-      this.type = 'button';
-      this.icon = 'pi pi-times-circle';
-      this.styleClass = 'p-button-danger';
-    }*/
+  ngOnInit(): void {}
+
+  handleClick() {
+    this.onClick.emit(); // Emite o evento para o componente pai
   }
 }

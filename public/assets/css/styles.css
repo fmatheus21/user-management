@@ -39,8 +39,16 @@ app-root,
 app-notfound,
 app-notfound #not-found,
 app-signin,
-app-signin #signin {
+app-signin #signin,
+app-form-signin #form-signin,
+app-introduction #introduction,
+app-recover,
+app-recover #recover,
+app-form-recover-password #form-recover-password {
   height: 100%;
+}
+app-introduction {
+  width: 100%;
 }
 
 app-notfound {
@@ -50,7 +58,8 @@ app-notfound {
   background-repeat: no-repeat;
 }
 
-app-signin {
+app-signin,
+app-recover {
   background-image: url('../media/image/bg/bg10.jpg');
   background-size: cover;
   background-position: center;

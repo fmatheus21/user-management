@@ -17,6 +17,12 @@
   --floatlabel-label-active-font-weight: bold;
   --floatlabel-label-active-color: #0284c7;
   --inputtext-focus-ring-shadow: 0 0 0 0.2rem color-mix(in srgb, #0284c7, transparent 80%);
+  --button-secondary-background: #f1f5f9;
+  --button-secondary-border-color: #f1f5f9;
+  --button-secondary-color: #475569;
+  --button-secondary-hover-background: #e2e8f0;
+  --button-secondary-hover-border-color: #e2e8f0;
+  --button-secondary-hover-color: #334155;
 }
 
 .p-button {
@@ -81,4 +87,19 @@
 .p-floatlabel-in:has(textarea.p-filled) label,
 .p-floatlabel-in:has(.p-inputwrapper-filled) label {
   color: var(--floatlabel-label-active-color) !important;
+}
+
+app-button {
+  padding: 0.5rem;
+}
+
+.p-button-secondary {
+  background: var(--button-secondary-background) !important;
+  border: 1px solid var(--button-secondary-border-color) !important;
+  color: var(--button-secondary-color) !important;
+}
+.p-button-secondary:not(:disabled):hover {
+  background: var(--button-secondary-hover-background) !important;
+  border: 1px solid var(--button-secondary-hover-border-color) !important;
+  color: var(--button-secondary-hover-color) !important;
 }
