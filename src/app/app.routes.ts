@@ -1,21 +1,18 @@
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
+  { path: '', redirectTo: '', pathMatch: 'full' },
   {
-    path: 'auth',
-    loadChildren: () =>
-      import('./pages/auth/auth.module').then((m) => m.AuthModule),
+    path: '',
+    loadChildren: () => import('./pages/public/public.module').then(m => m.PublicModule),
   },
   {
     path: 'user',
-    loadChildren: () =>
-      import('./pages/user/user.module').then((m) => m.UserModule),
+    loadChildren: () => import('./pages/user/user.module').then(m => m.UserModule),
   },
   {
     path: 'error',
-    loadChildren: () =>
-      import('./pages/error/error.module').then((m) => m.ErrorModule),
+    loadChildren: () => import('./pages/error/error.module').then(m => m.ErrorModule),
   },
-  { path: '', redirectTo: '/auth/signin', pathMatch: 'full' },
   { path: '**', redirectTo: 'error/not-found' },
 ];

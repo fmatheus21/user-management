@@ -36,6 +36,7 @@ app-root {
 }
 
 app-root,
+app-public,
 app-notfound,
 app-notfound #not-found,
 app-signin,
@@ -58,8 +59,7 @@ app-notfound {
   background-repeat: no-repeat;
 }
 
-app-signin,
-app-recover {
+app-public {
   background-image: url('../media/image/bg/bg10.jpg');
   background-size: cover;
   background-position: center;
