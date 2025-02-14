@@ -1,4 +1,4 @@
 <p-floatlabel variant="in">
-  <p-inputmask [id]="id" [mask]="mask" [autocomplete]="autocomplete" />
+  <p-inputmask [id]="id" [mask]="mask" [autocomplete]="autocomplete" [(ngModel)]="value" />
   <label [for]="id">{{ label }}</label>
 </p-floatlabel>
