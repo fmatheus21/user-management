@@ -12,10 +12,12 @@ import { InputmaskComponent } from '../../../template/components/inputmask/input
 import { PasswordComponent } from '../../../template/components/password/password.component';
 import { FooterTermsComponent } from '../../shared/footer-terms/footer-terms.component';
 import { MessageComponent } from '../../../template/components/message/message.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-signin',
   imports: [
+    CommonModule,
     RouterModule,
     ReactiveFormsModule,
     IntroductionComponent,

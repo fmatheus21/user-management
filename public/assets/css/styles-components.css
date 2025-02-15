@@ -23,6 +23,7 @@
   --button-secondary-hover-background: #e2e8f0;
   --button-secondary-hover-border-color: #e2e8f0;
   --button-secondary-hover-color: #334155;
+  --inputtext-color-invalid-feedback: #ef4444;
 }
 
 .p-button {
@@ -102,4 +103,16 @@ app-button {
   background: var(--button-secondary-hover-background) !important;
   border: 1px solid var(--button-secondary-hover-border-color) !important;
   color: var(--button-secondary-hover-color) !important;
+}
+
+app-inputmask.ng-invalid.is-invalid input.p-inputtext.p-component,
+app-password.is-invalid input.p-inputtext.p-component {
+  outline: 0 none !important;
+  outline-offset: 0 !important;
+  border-color: var(--inputtext-color-invalid-feedback) !important;
+  box-shadow: 0 0 5px var(--inputtext-color-invalid-feedback) !important;
+}
+app-inputmask.ng-invalid.is-invalid label,
+app-password.is-invalid label {
+  color: var(--inputtext-color-invalid-feedback) !important;
 }

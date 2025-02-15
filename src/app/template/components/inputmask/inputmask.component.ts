@@ -2,7 +2,6 @@ import { Component, Input, OnInit, forwardRef } from '@angular/core';
 import { FloatLabel } from 'primeng/floatlabel';
 import { InputMask } from 'primeng/inputmask';
 import { ControlValueAccessor, FormsModule, NG_VALUE_ACCESSOR } from '@angular/forms';
-import { CommonModule } from '@angular/common';
 
 const INPUT_FIELD_VALUE_ACCESSOR: any = {
   provide: NG_VALUE_ACCESSOR,
@@ -24,6 +23,8 @@ export class InputmaskComponent implements ControlValueAccessor {
   @Input({ required: true }) label!: string;
   @Input({ required: true }) required = false;
   @Input({ required: true }) isReadOnly = false;
+  @Input() errorCss!: { [klass: string]: any };
+  @Input() classErrorCss!: string;
   innerValue: any;
 
   get value() {
