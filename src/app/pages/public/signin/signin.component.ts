@@ -13,6 +13,7 @@ import { PasswordComponent } from '../../../template/components/password/passwor
 import { FooterTermsComponent } from '../../shared/footer-terms/footer-terms.component';
 import { MessageComponent } from '../../../template/components/message/message.component';
 import { CommonModule } from '@angular/common';
+import { NavigatorService } from '../../../core/service/navigator.service';
 
 @Component({
   selector: 'app-signin',
@@ -34,8 +35,8 @@ import { CommonModule } from '@angular/common';
 })
 export class SigninComponent extends BaseFormComponent implements OnInit {
   constructor(
-    private scriptService: ScriptService,
     private formBuilder: FormBuilder,
+    public navigatorService: NavigatorService,
     messagesService: MessagesService
   ) {
     super(messagesService);
@@ -51,6 +52,7 @@ export class SigninComponent extends BaseFormComponent implements OnInit {
 
   override submit() {
     console.log('O formulário foi validado.');
+    this.redirectDashboard();
   }
 
   private formValidation() {
@@ -60,19 +62,11 @@ export class SigninComponent extends BaseFormComponent implements OnInit {
     });
   }
 
-  private loadScript() {
-    this.scriptService
-      .loadExternalScript('./assets/js/plugins.bundle.js')
-      .then(() => {
-        console.log('plugins.bundle.js carregado.');
-      })
-      .catch(() => {});
+  redirectRecover() {
+    this.navigatorService.navigateTo(this.navigatorService.routes.AUTH.RECOVER);
+  }
 
-    this.scriptService
-      .loadExternalScript('./assets/js/scripts.bundle.js')
-      .then(() => {
-        console.log('scripts.bundle.js carregado.');
-      })
-      .catch(() => {});
+  redirectDashboard() {
+    this.navigatorService.navigateTo(this.navigatorService.routes.DASHBOARD);
   }
 }

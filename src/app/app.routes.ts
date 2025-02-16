@@ -1,10 +1,14 @@
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
-  { path: '', redirectTo: '', pathMatch: 'full' },
+  { path: '', redirectTo: 'public', pathMatch: 'full' },
   {
-    path: '',
+    path: 'public',
     loadChildren: () => import('./pages/public/public.module').then(m => m.PublicModule),
+  },
+  {
+    path: 'private',
+    loadChildren: () => import('./pages/private/private.module').then(m => m.PrivateModule),
   },
   {
     path: 'error',

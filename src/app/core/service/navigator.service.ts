@@ -7,8 +7,15 @@ import { Router } from '@angular/router';
 export class NavigatorService {
   constructor(private router: Router) {}
 
-  signin() {
-    this.router.navigate(['auth/signin']);
-    window.scrollTo(0, 0);
+  readonly routes = {
+    AUTH: {
+      SIGNIN: '/public/auth/signin',
+      RECOVER: '/public/auth/recover',
+    },
+    DASHBOARD: '/private/dashboard',
+  };
+
+  navigateTo(route: string) {
+    this.router.navigate([route]);
   }
 }

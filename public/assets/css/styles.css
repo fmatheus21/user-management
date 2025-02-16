@@ -1,3 +1,7 @@
+:root {
+  --footer-background: #f1f5f9;
+}
+
 @font-face {
   font-family: Poppins-Regular;
   src: url('../fonts/poppins/Poppins-Regular.ttf');
@@ -45,7 +49,9 @@ app-form-signin #form-signin,
 app-introduction #introduction,
 app-recover,
 app-recover #recover,
-app-form-recover-password #form-recover-password {
+app-form-recover-password #form-recover-password,
+app-private,
+app-private #kt_app_root {
   height: 100%;
 }
 app-introduction {
@@ -63,4 +69,12 @@ app-public {
   background-image: url('../media/image/bg/bg10.jpg');
   background-size: cover;
   background-position: center;
+}
+
+#kt_app_footer {
+  /*position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;*/
+  background: var(--footer-background);
 }

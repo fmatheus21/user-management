@@ -26,7 +26,7 @@ import { MessageComponent } from '../../../template/components/message/message.c
 })
 export class RecoverComponent extends BaseFormComponent implements OnInit {
   constructor(
-    private navigator: NavigatorService,
+    private navigatorService: NavigatorService,
     private formBuilder: FormBuilder,
     messagesService: MessagesService
   ) {
@@ -52,6 +52,6 @@ export class RecoverComponent extends BaseFormComponent implements OnInit {
   }
 
   redirect() {
-    this.navigator.signin();
+    this.navigatorService.navigateTo(this.navigatorService.routes.AUTH.SIGNIN);
   }
 }
