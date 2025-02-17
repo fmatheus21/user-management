@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { filter, map } from 'rxjs/operators';
+import { BreadcrumbService } from './core/service/breadcrumb.service';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,8 @@ export class AppComponent implements OnInit {
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
-    private titleService: Title
+    private titleService: Title,
+    private breadcrumbService: BreadcrumbService
   ) {}
 
   ngOnInit(): void {
@@ -25,7 +27,9 @@ export class AppComponent implements OnInit {
       )
       .subscribe(route => {
         const title = route.snapshot.data['title'] || 'Gerenciamento de Usuários';
+        const breadcrumb = route.snapshot.data['breadcrumb'];
         this.titleService.setTitle(title);
+        this.breadcrumbService.setBreadcrumb(breadcrumb);
       });
   }
 

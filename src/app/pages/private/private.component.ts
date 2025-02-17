@@ -1,33 +1,21 @@
-import { Component, AfterViewInit, OnInit, Renderer2, AfterViewChecked } from '@angular/core';
+import { Component, OnInit, AfterViewChecked } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { ScriptService } from '../../core/service/script.service';
 import { HeaderComponent } from '../shared/header/header.component';
 import { SidebarComponent } from '../shared/sidebar/sidebar.component';
 import { FooterComponent } from '../shared/footer/footer.component';
-import { ModalActivityComponent } from '../shared/modal-activity/modal-activity.component';
 import { ModalNotificationComponent } from '../shared/modal-notification/modal-notification.component';
 
-declare var KTApp: any;
 declare var KTMenu: any;
 
 @Component({
   selector: 'app-private',
-  imports: [
-    RouterModule,
-    HeaderComponent,
-    SidebarComponent,
-    FooterComponent,
-    ModalActivityComponent,
-    ModalNotificationComponent,
-  ],
+  imports: [RouterModule, HeaderComponent, SidebarComponent, FooterComponent, ModalNotificationComponent],
   templateUrl: './private.component.html',
   styleUrl: './private.component.css',
 })
 export class PrivateComponent implements OnInit, AfterViewChecked {
-  constructor(
-    private scriptService: ScriptService,
-    private renderer: Renderer2
-  ) {}
+  constructor(private scriptService: ScriptService) {}
 
   ngOnInit(): void {
     this.loadScript();
@@ -41,12 +29,6 @@ export class PrivateComponent implements OnInit, AfterViewChecked {
   }
 
   ngAfterViewChecked() {
-    /*if (KTApp?.init) {
-      setTimeout(() => {
-        KTApp.init();
-      }, 500);
-    }*/
-
     if (KTMenu?.init) {
       setTimeout(() => {
         KTMenu.init();
