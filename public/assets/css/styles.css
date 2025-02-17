@@ -72,9 +72,15 @@ app-public {
 }
 
 #kt_app_footer {
-  /*position: fixed;
-  bottom: 0;
-  width: 100%;
-  padding: 10px;*/
   background: var(--footer-background);
+}
+
+app-toggle-user,
+app-toggle-theme,
+app-toggle-shortcut,
+app-toggle-notification,
+app-toggle-search,
+app-toggle-activity {
+  display: flex;
+  align-items: center;
 }
