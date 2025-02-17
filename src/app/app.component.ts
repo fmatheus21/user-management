@@ -30,6 +30,7 @@ export class AppComponent implements OnInit {
         const breadcrumb = route.snapshot.data['breadcrumb'];
         this.titleService.setTitle(title);
         this.breadcrumbService.setBreadcrumb(breadcrumb);
+        console.log(route.snapshot.data);
       });
   }
 

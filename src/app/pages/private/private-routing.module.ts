@@ -18,7 +18,7 @@ const routes: Routes = [
         component: DashboardComponent,
         data: {
           title: 'Dashboard',
-          breadcrumb: 'Dashboard',
+          breadcrumb: [{ path: 'Private' }, { path: 'Dashboard' }],
         },
       },
     ],
