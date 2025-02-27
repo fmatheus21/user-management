@@ -1,59 +1,61 @@
-# UserManagement
+<h1 align="center">User Management</h1>
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.5.
+<br/>
 
-## Development server
+>## <center>  🚧 Em Construção 🚧  </center>
 
-To start a local development server, run:
+## Conteúdos
 
-```bash
-ng serve
+* [Sobre](#sobre-o-projeto)
+* [Pré-requisitos](#pré-requisitos)
+* [Como usar](#como-usar)
+* [Tecnologias](#tecnologias)
+
+<br/>
+
+## Sobre o Projeto
+Este projeto é uma aplicação <code>***Angular***</code> para <code>***Gerenciamento de Usuários***</code>, permitindo administrar os acessos e contas de usuários em um ambiente corporativo fictício.
+- **Administradores** podem criar novos usuários, bloquear contas, redefinir senhas e gerenciar permissões.
+- **Usuários** comuns podem atualizar suas informações, alterar a senha, consultar seu histórico de acessos e visualizar seus dados de perfil.
+
+A aplicação foi desenvolvida com foco em segurança, usabilidade e organização eficiente dos usuários.
+
+
+<br/>
+
+## Pré-requisitos
+- Angular CLI 19.1.5
+- Node 20.12.2
+- NPM 10.5.0
+- VS Code
+
+<br/>
+
+## Como Usar
+No terminal do VS Code execute o comando:
+```
+npm install
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Este comando baixará todas as dependências necessárias do projeto.
+Quando terminar o processo, execute o comando:
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```
+npm start
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+O projeto será iniciado e você poderá acessar através da url `http://localhost:4200/`.
 
-```bash
-ng generate --help
-```
+A aplicação está na sua fase inicial e ainda não há integração com o `back-end`, que você pode baixar o projeto <code>***[AQUI](https://github.com/fmatheus21/user-management)***</code> no meu repositório.
 
-## Building
+<br/>
 
-To build the project run:
 
-```bash
-ng build
-```
+## Tecnologias
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+![Angular CLI](https://img.shields.io/static/v1?label=angular-cli&message=19.1.5&color=green)
+![Node](https://img.shields.io/static/v1?label=node&message=20.12.2&color=green)
+![PrimeNG](https://img.shields.io/static/v1?label=primeng&message=19.0.5&color=green)
+![Prime Icons](https://img.shields.io/static/v1?label=primeicons&message=7.0.0&color=green)
+![Prettier](https://img.shields.io/static/v1?label=prettier&message=3.4.2&color=green)
+![Typescript](https://img.shields.io/static/v1?label=typescript&message=5.7.2&color=green)
