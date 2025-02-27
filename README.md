@@ -48,7 +48,7 @@ npm start
 
 O projeto será iniciado e você poderá acessar através da url `http://localhost:4200/`.
 
-A aplicação está na sua fase inicial e ainda não há integração com o `back-end`, que você pode baixar o projeto <code>***[AQUI](https://github.com/fmatheus21/user-management)***</code> no meu repositório.
+A aplicação está na sua fase inicial e ainda não há integração com o `back-end`, que você pode baixar o projeto <code>***[AQUI](https://github.com/fmatheus21/authorization)***</code> no meu repositório.
 
 <br/>
 
